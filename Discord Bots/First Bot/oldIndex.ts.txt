@@ -1,0 +1,92 @@
+
+client.on('messageCreate', (message) => {
+    if (message.content === '!hi'){
+        if(message.member?.nickname == "Arthur")
+        {
+            message.reply({
+                content: 'All hail the King!',
+            })
+        }
+        else
+        {
+            message.reply({
+                content: 'Hello, ' + message.member?.nickname,
+            })
+        }
+    }
+})
+
+client.on('messageCreate', (message) => {
+    if (message.content === '!help'){
+        message.reply({
+            content: 'type !help for commands\ntype !hi to say hi\ntype !valorant to pick a random valorant agent',
+        })
+    }
+})
+
+client.on('messageCreate', (message) => {
+    if (message.content === '!valorant'){
+        var character;
+        var num = Math.floor(Math.random() * (18 + 1));
+        if(num == 0){
+            character = "whoever you want";
+        }
+        else if(num == 1){
+            character = "Neon";
+        }
+        else if(num == 2){
+            character = "Chamber";
+        }
+        else if(num == 3){
+            character = "Skye";
+        }
+        else if(num == 4){
+            character = "Yoru";
+        }
+        else if(num == 5){
+            character = "Astra";
+        }
+        else if(num == 6){
+            character = "KAY/O";
+        }
+        else if(num == 7){
+            character = "Pheonix";
+        }
+        else if(num == 8){
+            character = "Raze";
+        }
+        else if(num == 9){
+            character = "Brimstone";
+        }
+        else if(num == 10){
+            character = "Jett";
+        }
+        else if(num == 11){
+            character = "Sage";
+        }
+        else if(num == 12){
+            character = "Viper";
+        }
+        else if(num == 13){
+            character = "Breach";
+        }
+        else if(num == 14){
+            character = "Cypher";
+        }
+        else if(num == 15){
+            character = "Sova";
+        }
+        else if(num == 16){
+            character = "Omen";
+        }
+        else if(num == 17){
+            character = "Reyna";
+        }
+        else if(num == 18){
+            character = "Killjoy";
+        }
+        message.reply({
+            content: message.member?.nickname + ' you should pick ' + character,
+        })
+    }
+})

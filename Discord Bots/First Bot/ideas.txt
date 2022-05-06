@@ -1,0 +1,16 @@
+-currency system
+	-each messge awards currency
+	-each certain action/command awards currency
+	-each commendation by other user awards currecny
+	-each top performance in a game awards currecny
+		-needs to be confirmed by two other players playing with you
+	-can gamble currency
+	-can check how much you have
+	-would need to read and write a file
+-other random generators
+	-what game to play
+	-apex legend
+-
+
+
+http://localhost:3000/trip?name=London
